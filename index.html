@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>our first page</title>
+		<link rel="stylesheet" type="text/css" href="site.css"/>
+	</head>
+<body>
+	<div class="container">
+	<aside class="about-me">
+			<nav class="other"><h5>
+				about me
+			</h5></nav>
+			<nav class="other"><h5>
+				articles
+			</h5></nav>
+			<nav class="other"><h5>
+				contact
+			</h5></nav>
+		</aside>
+
+		<article id ="first_section" class="blog-post">
+			<h1>first post</h1>
+			<section class="date"><h5>march 11, 2015</h5></section>
+			<h2>this is subtitle of my first post</h2>
+
+			<section title="section" class="main-text">
+				<h5>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+				Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+				mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+				quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+				rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+				Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+				Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus
+				in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+				Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+				Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+				adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+				Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
+				quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet
+				nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+			</h5></section>
+
+			<a href="http://www.udemy.com">link to udemy</a>
+			<a href="html5.png" target="_blank">html logo</a>
+
+			<h2>this is just another subtitle for the same post</h2>
+			<section class="main-text">
+				<h5>
+			One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a
+			horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown
+			belly, slightly domed and divided by arches into stiff sections.
+		</h5></section>
+			<img class="html-logo" src="html5.png" alt="the html5 logo">
+		</article>
+
+		<aside class="other-posts">
+			<nav class="other"><h5>
+				<a href="#first_section">article 1</a>
+			</h5></nav>
+			<nav class="other"><h5>
+				<a href="#second_section">article 2</a>
+			</h5></nav>
+			<nav class="other"><h5>
+				article 3
+			</h5></nav>
+		</aside>
+
+
+
+		<article id ="second_section" class="blog-post">
+			<h1>second post</h1>
+			<section class="date"><h5>march 15, 2015</h5></section>
+			<h2>this is subtitle of my second post</h2>
+			<section class="main-text"><h5>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced
+			by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab
+			quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting
+			zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly
+			daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs!
+			"Now fax quiz Jack!" my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching
+			W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips
+			galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my
+			wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s
+			job is to vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game. Woven silk pyjamas
+			exchanged for blue quartz. Brawny gods just</h5></section>
+		</article>
+
+		<div class="clearfix"></div>
+
+		<div class="author-info">
+		<img src="author.png" alt="author logo">
+		<section class="author-text"><h3>gabriel lucas</h3></section>
+	</div>
+	</div>
+	<div id="loc"></div>
+
+<script>
+	var x = document.getElementById("loc");
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		}
+	}
+
+	function showPosition(position) {
+		x.innerHTML = "Latitude: " + position.coords.latitude +
+		"<br>Longitude: " + position.coords.longitude;
+	}
+	getLocation();
+
+</script>
+</body>
+</html>
